@@ -1,20 +1,27 @@
 <template>
     <div class="navbar">
-        <router-link to="/" class="menu">
+        <router-link to="/" id="dashboard" class="menu">
             <span>Dashboard</span>
         </router-link>
-        <router-link to="/server" class="menu">
+        <router-link to="/server" id="server" class="menu">
             <span>Server</span>
         </router-link>
-        <router-link to="/transcoder" class="menu">
+        <router-link to="/transcoder" id="transcoder" class="menu">
             <span>Transcoder</span>
+        </router-link>
+        <router-link to="/management/preset" id="management" class="menu">
+            <span>Management</span>
         </router-link>
     </div>
 </template>
 
 <script>
 export default {
-
+    method: {
+        // getActiveClass: function(menuId) {
+        //     if([this.])
+        // }
+    }
 }
 </script>
 

@@ -3,27 +3,30 @@
     <Header></Header>
     <NavBar></NavBar>
     <div class="wrap">
-      <SubMenu></SubMenu>
+      <!-- <div v-if="$route.params.matched('/management')">
+        <SubMenu></SubMenu>
+      </div> -->
       <div class="content">
         <router-view></router-view>
       </div>
     </div>
+    <!-- <Footer></Footer> -->
   </div>
 </template>
 
 <script>
 import Header from './components/layouts/HeaderLayout.vue'
 import NavBar from './components/layouts/NavBarLayout.vue'
-import SubMenu from './components/layouts/MenuLayout.vue'
-// import Content from './components/layouts/ContentLayout.vue'
+// import Footer from './components/layouts/FooterLayout.vue'
+// import SubMenu from './components/layouts/MenuLayout.vue'
 
 export default {
   name: 'App',
   components: {
     Header,
     NavBar,
-    SubMenu,
-    // Content,
+    // Footer,
+    // SubMenu,
   }
 }
 </script>
@@ -32,9 +35,11 @@ export default {
 .wrap {
   display: flex;
   padding : 20px;
+  // height: auto;
+  // min-height: 100%;
 }
 .content {
-  width: 80%;
+  width: 100%;
   margin:auto;
 }
 </style>
